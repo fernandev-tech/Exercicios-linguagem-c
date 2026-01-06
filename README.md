@@ -1,5 +1,17 @@
-# Exercicios-linguagem-c
+# Conversão de temperatura (Celsius → Fahrenheit)
 
-Este repositório contém alguns exercícios simples que foram feitos enquanto fazia a 11ª classe.
+## Objectivo
 
-Contém exercícios feitos por mim mesmo de forma particular e alguns em sala de aula
+Converter temperatura em Celsius para Fahrenheit 
+
+## Como funciona?
+
+- Execute o programa 
+- Aparece uma mensagem pedindo para inserir uma temperatura em Celsius 
+- Insira a temperatura e tecle Enter
+- E o programa apresenta a temperatura convertida para Fahrenheit 
+- Se a o usuário inserir uma temperatura em Celsius maior que 100 graus, o program imprime uma mensagem de erro
+
+## Autor
+
+Desenvolvido por Fernandev-Fernando B Sebastião - 2025 (https://GitHub.com/fernandev-tech)
