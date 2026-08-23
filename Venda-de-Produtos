@@ -1,0 +1,46 @@
+#include<stdio.h>
+
+int main()
+{
+    
+    char prodA[20]="Banana 🍌";
+    char prodB[20] ="Laranja 🍊";
+    float precoA=500;
+    float precoB=200;
+    int opcao;
+    float troco, pagamento, total;
+    
+    printf("Produtos Disponíveis: \n\n");
+    printf("1- %s, %2.f kz\n", prodA,precoA);
+    printf("2- %s, %2.f kz\n", prodB,precoB);
+    
+    do{
+    
+    printf("\n\nSelecione um produto: ");
+    scanf("%d", &opcao);
+    
+    if(opcao!=1 && opcao!=2){
+    printf("\n\t\t opção errada...");
+    }
+    
+    }while(opcao!=1 && opcao!=2);
+    
+    if(opcao==1){
+    total=precoA;
+    }else{
+    total=precoB;
+    }
+    printf("\n\nO valor a pagar é %2.f kz Digite o pagamento:",total);
+    scanf("%f",&pagamento);
+    
+    if(pagamento<total){
+    printf("\nValor baixo. Venda Cancelada");
+    }else{
+    printf("Venda bem sucedida. Seu troco é de%2.f kz", pagamento-total);
+    
+    }
+    
+    
+   
+    
+}
