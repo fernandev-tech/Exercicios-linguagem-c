@@ -1,0 +1,223 @@
+#include<stdio.h>
+#include<string.h>
+
+void menu();
+void levantamento();
+void consulta();
+void pag_de_servico();
+void transferencia();
+void outros_servicos();
+
+int main()
+{
+    char digita[4];
+
+    printf("Digite uma senha de 4 dígitos:\n");
+    gets(digita);
+
+
+    int tamanho = strlen(digita);
+
+   // printf("Verificar Tamanho: %d\n ", tamanho);
+
+    if(tamanho != 4) {
+        printf("Senha Inválida");
+
+        return 0;
+    } else {
+
+        printf("————————————Seja Bem-Vindo———————————\n\n");
+    }
+    menu ();
+}
+
+
+void menu() {
+    int escolha;
+    printf("Selecione a acção:\n");
+    printf("1- Levantamento\n");
+    printf("2- Consulta\n");
+    printf("3- Pagamento de Serviço\n");
+    printf("4- Transferência\n");
+    printf("5- Outros Serviços\n");
+    printf("\nEscolha uma opção:\n");
+    scanf("%d", & escolha);
+
+    switch (escolha) {
+    case 1:
+        levantamento();
+        break;
+    case 2:
+        consulta();
+        break;
+    case 3:
+        pag_de_servico();
+        break;
+    case 4:
+        transferencia();
+        break;
+    case 5:
+        outros_servicos();
+        break;
+    default:
+        printf("Valor inválido");
+        break;
+    }
+}
+
+void levantamento () {
+
+    int valor;
+    int vet_escolher[4]= {5000, 10000, 20000, 50000, 100.000};
+    int escolher = 0;
+    printf("\nFazer levantamento\n");
+
+    printf("1-5.000\n");
+    printf("2-10.000\n");
+    printf("3-20.000\n");
+    printf("4-50.000\n");
+    printf("5-100.000\n");
+
+
+    printf("Selecione o Valor:\n");
+    scanf("%d", &valor);
+
+    switch (valor) {
+
+    case 1:
+        escolher=vet_escolher[0];
+
+        break;
+    case 2:
+        escolher=vet_escolher[1];
+        break;
+    case 3:
+        escolher=vet_escolher[2];
+        break;
+    case 4:
+        escolher=vet_escolher[3];
+        break;
+    case 5:
+        escolher=vet_escolher[4];
+        break;
+    default:
+        printf("Levantamento Inválido!");
+        break;
+
+
+
+
+    }
+
+
+    printf("\n Levantamento de: %d", escolher);
+    printf("\tOPERAÇÃO CONCLUÍDA");
+
+
+}
+
+
+
+void consulta() {
+    int aceitar ;
+    printf("Deseja consultar seu saldo?\n");
+    printf("\n1- Sim \t\t\t 2- Não\n");
+    scanf("%d", &aceitar);
+    if(aceitar == 1) {
+        printf("O seu saldo: 5 000 117 000");
+    } else if(aceitar == 2) {
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        menu();
+    } else {
+        printf("Úps! Ocorreu um erro. Tente novamente!");
+    }
+
+
+}
+void pag_de_servico() {
+    int pagamento;
+    printf("Selecione o Pagamento do Serviço\n");
+    printf("\tTV\n");
+    printf("1- Zap\n");
+    printf("2- DSTV\n");
+    printf("3-TV CABO\n");
+    printf("\tInternet e Recargas\n");
+    printf("4- Africell\n");
+    printf("5- Unitel\n");
+    scanf("%d", &pagamento);
+    switch(pagamento) {
+    case 1:
+        printf("\t\tRecarga da Zap\n");
+        printf("1- Pacote Mini 1950,00\n");
+        printf("2- Pacote Mini Mais 2950,00\n");
+        printf("3- Pacote Max 3950,00\n");
+        printf("4- Pacote Premium 5950,00");
+break;
+    case 2:
+        printf("\t\tRecarga da DSTV\n");
+        printf("1-Pacote Familia 3950,00\n");
+        printf("2-Pacote Grande 6950,00\n");
+        printf("3-Pacote  Mega 18000,00\n");
+        printf("4-Pacote Bué 22000,00");
+        break;
+    case 3:
+    printf("\t\tRecarga da TV Cabo\n");
+    printf("Abrir Contrato: 14. 000,00");
+    printf("Recarga: 3400,00");
+    break;
+    case 4:
+     printf("\tInternet e Recargas\n");
+    printf("Recargas Unitel:\n");
+    printf("1-Voz e SMS\n");
+    printf("2- Internet");
+    break;
+case 5:
+  printf("\tInternet e Recargas\n");
+    printf("Recargas Africell:\n");
+    printf("1-Voz e SMS\n");
+    printf("2- Internet");
+    break;
+    default:
+    printf("Valor Inválido Tente Novamente");
+        }
+
+
+
+}
+
+void transferencia() {
+    int transferir ;
+    int pagar;
+    printf("\t\tFazer Transferência\n");
+    printf("Selecione o Destino:\n");
+    printf("1-Escola 🏫\n");
+    printf("2-Empresa\n");
+    printf("3-Para Nós\n");
+    scanf("%d", &transferir);
+
+    if(transferir == 1) {
+        printf("Valor a transferir:\n");
+        scanf("%d", &pagar);
+        printf("O valor transferido é: %d", pagar);
+    } else if(transferir == 2) {
+        printf("Valor a transferir:\n");
+        scanf("%d", &pagar);
+        printf("O valor transferido é: %d", pagar);
+    } else if(transferir == 3) {
+        printf("Valor a transferir:\n");
+        scanf("%d", &pagar);
+        printf("O valor transferido é: %d", pagar);
+    } else {
+        printf("Valor Inválido. Tente novamente!");
+    }
+}
+
+
+void outros_servicos() {
+    printf("\tOutros Servicos\n");
+    
+    printf("Agradecemos por usar o nosso sistema do Multicaixa Express desenvolvido em Linguagem C. ");
+    printf("O nosso Programa Tem como objectivo tornar mais fácil as transferências por intermédio do teu dispositivo móvel.\n");
+    printf("\nCriado por:\n");
+    printf("Fernando Sebastião E Isanildo Tomás");
+}
